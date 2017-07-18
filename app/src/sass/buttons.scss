@@ -1,0 +1,14 @@
+button{
+	background: $color-primary;
+	color: #FFF;
+	padding: 10px 40px;
+	border: none;
+	border-bottom: 3px solid $color-primary;
+	&:hover{
+		color: $color-primary;
+		background: $bg-secundary;
+	}
+	&:active{
+		border-bottom: 3px solid $bg-secundary;
+	}
+}

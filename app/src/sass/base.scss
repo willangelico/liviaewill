@@ -1,0 +1,16 @@
+h1{
+	font-family: $font-type-header1;
+}
+h2{
+	text-align: center;
+	font-family: $font-type-default;
+}
+section{
+	padding: 50px;
+	margin-bottom: 50px;
+	font-family: $font-type-default;
+	span{
+		display: block;
+		text-align: center;
+	}
+}

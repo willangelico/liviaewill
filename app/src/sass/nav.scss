@@ -1,0 +1,31 @@
+header{
+	font-family: $font-type-default;
+	background: $bg-secundary;
+	position: fixed;
+	width: 100%;
+	z-index: 9;
+	ul{
+		list-style: none;
+		text-align: center;
+		margin: 0;
+		li{
+			display: inline;
+		
+			a{
+				color: $color-default;
+				padding: 20px;
+				display: inline-block;
+				text-transform: uppercase;
+				font-weight: bold;
+				&:hover,
+				&:active,
+				.active{
+					color: $color-primary;
+					text-decoration: none;
+				}
+
+			}
+		}
+	}
+	
+}
