@@ -8760,30 +8760,55 @@ button.close {
 
 /*# sourceMappingURL=bootstrap.css.map */
 h1 {
-  font-family: "Italianno"; }
+  font-family: "Italianno";
+  color: #333; }
 
 h2 {
   text-align: center;
-  font-family: "Raleway", sans-serif; }
+  font-family: "Raleway", sans-serif;
+  color: #333;
+  text-transform: uppercase;
+  font-weight: bold; }
 
 section {
   padding: 50px;
   margin-bottom: 50px;
-  font-family: "Raleway", sans-serif; }
+  font-family: "Raleway", sans-serif;
+  color: #333; }
   section span {
     display: block;
     text-align: center; }
+
+.txt-center {
+  text-align: center; }
+
+footer a {
+  font-size: 10px;
+  text-align: right;
+  display: block;
+  color: #999; }
+
+.modal-body h5, .modal-body a {
+  color: #f1637f; }
+
+.modal-body a {
+  text-decoration: underline; }
+
+#header-mobile {
+  display: none; }
 
 header {
   font-family: "Raleway", sans-serif;
   background: #f8d8e1;
   position: fixed;
   width: 100%;
-  z-index: 9; }
+  z-index: 9;
+  box-shadow: 0px -40px 120px #000; }
   header ul {
     list-style: none;
     text-align: center;
-    margin: 0; }
+    margin: 0;
+    padding: 0; }
     header ul li {
       display: inline; }
       header ul li a {
@@ -8791,38 +8816,91 @@ header {
         padding: 20px;
         display: inline-block;
         text-transform: uppercase;
-        font-weight: bold; }
-        header ul li a:hover, header ul li a:active,
+        font-weight: bold;
+        width: calc(100% / 7); }
+        header ul li a:hover, header ul li a:active, header ul li a:focus,
         header ul li a .active {
           color: #f1637f;
           text-decoration: none; }
+        header ul li a.font-primary {
+          font-family: "Italianno";
+          text-transform: none;
+          font-size: 20px; }
+
+@media (max-width: 992px) {
+  header {
+    width: 70%;
+    height: 100%;
+    transform: translate(-100%, 0);
+    box-shadow: none;
+    -webkit-transition: all 2s ease;
+    /** Chrome & Safari **/
+    -moz-transition: all 2s ease;
+    /** Firefox **/
+    -o-transition: all 2s ease;
+    /** Opera **/
+    transition: all 2s ease; }
+    header.active {
+      transform: translate(0, 0);
+      box-shadow: 0px -40px 120px #000; }
+    header #header-mobile {
+      display: block;
+      position: relative; }
+      header #header-mobile button {
+        width: 40px;
+        padding: 10px;
+        position: absolute;
+        right: -40px; }
+    header .container {
+      position: relative; }
+      header .container ul {
+        position: absolute;
+        padding-top: 40px; }
+        header .container ul li {
+          display: block; }
+          header .container ul li a {
+            width: 100%;
+            text-align: left;
+            font-size: 40px; }
+            header .container ul li a.font-primary {
+              display: none; } }
+
+@media (max-width: 728px) {
+  header {
+    width: 85%; }
+    header .container ul li a {
+      font-size: 20px; } }
+
+@media (max-width: 320px) {
+  header .container ul li a {
+    font-size: 20px; } }
 
 #home {
   background: url("../img/bg-home.png") no-repeat;
   background-size: cover;
   background-position: center center;
   width: 100%;
-  padding: 20%;
+  padding: 15%;
   height: 100%;
   margin-bottom: 0px !important; }
   #home h1, #home span {
     text-align: center; }
   #home h1 {
     font-size: 220px;
-    margin: 0px;
     color: #f1637f;
+    margin: 0px;
     line-height: 140px;
     -ms-transform: rotate(-5deg);
     -webkit-transform: rotate(-5deg);
     transform: rotate(-5deg); }
   #home span {
     display: block;
-    font-size: 30px;
+    font-size: 50px;
     color: #000000; }
 
 #match {
   height: 100%;
-  background: #000;
+  background: #222222;
   padding: 0px;
   position: relative;
   padding-bottom: 50px; }
@@ -8839,14 +8917,17 @@ header {
     display: block; }
     #match .tinder h2 {
       font-family: "Italianno";
-      font-size: 90px;
+      font-size: 120px;
       margin: 0px;
       color: #FFF;
-      padding-top: 40px; }
+      padding-top: 40px;
+      text-transform: none;
+      font-weight: normal; }
   #match .profile {
     text-align: center; }
     #match .profile img {
-      max-width: 400px;
+      width: 400px;
+      max-width: 100%;
       display: block;
       margin: 0 auto; }
     #match .profile span {
@@ -8855,15 +8936,237 @@ header {
       font-size: 20px;
       font-weight: bold;
       display: block; }
+    #match .profile p {
+      font-style: italic;
+      color: #d7d7d7; }
 
-button {
+#save-the-date {
+  text-align: center; }
+  #save-the-date h3 {
+    display: block;
+    clear: both;
+    padding: 40px 0 0; }
+
+#timer {
+  width: 50%;
+  margin: 0px auto;
+  padding: 60px 40px; }
+  #timer .box-timer .time {
+    font-size: 60px; }
+  #timer .box-timer .label {
+    color: #333; }
+
+#wedding {
+  background: #e9e9e9; }
+  #wedding #chacara {
+    position: relative;
+    margin: 20px auto; }
+    #wedding #chacara .chacara-img {
+      position: relative;
+      max-width: 70%;
+      display: block;
+      float: left; }
+      #wedding #chacara .chacara-img span {
+        display: block;
+        width: 94%;
+        height: 92%;
+        position: absolute;
+        top: 3.5%;
+        left: 2.6%;
+        border: 3px #fff solid;
+        z-index: 7; }
+      #wedding #chacara .chacara-img img {
+        width: 100%;
+        display: block; }
+    #wedding #chacara .chacara-info {
+      width: 50%;
+      right: 0;
+      top: 50px;
+      position: absolute;
+      background-color: #f1637f;
+      color: #fff;
+      padding: 40px;
+      z-index: 8; }
+      #wedding #chacara .chacara-info span {
+        text-align: left;
+        padding-bottom: 20px; }
+  #wedding #infos span,
+  #wedding #infos h3,
+  #wedding #infos p {
+    text-align: center; }
+  #wedding #infos span {
+    color: #F1637F;
+    font-size: 24px !important; }
+  #wedding #infos h3 {
+    margin-top: 0px !important; }
+  #wedding #infos p {
+    width: 70%;
+    margin: 0 auto;
+    color: #65645f; }
+  #wedding #infos-more {
+    padding: 50px 0px; }
+    #wedding #infos-more h4,
+    #wedding #infos-more p {
+      text-align: center; }
+    #wedding #infos-more p {
+      width: 70%;
+      margin: 0 auto;
+      color: #65645f; }
+      #wedding #infos-more p a {
+        color: #f1637f; }
+        #wedding #infos-more p a:hover, #wedding #infos-more p a:focus, #wedding #infos-more p a:active {
+          color: #f1637f; }
+  #wedding #map {
+    margin: 10px -50px; }
+    #wedding #map iframe {
+      width: 100%;
+      display: block;
+      pointer-events: none;
+      position: relative;
+      /* IE needs a position other than static */ }
+      #wedding #map iframe.clicked {
+        pointer-events: auto; }
+
+#rsvp {
+  background: #e9e9e9;
+  text-align: center;
+  padding: 140px 0px; }
+  #rsvp button {
+    margin: 30px; }
+
+#gifts .gift {
+  text-align: center; }
+  #gifts .gift a {
+    display: block;
+    margin: 40px;
+    padding: 30px; }
+    #gifts .gift a:hover img {
+      opacity: 0.8; }
+    #gifts .gift a img {
+      border: 1px solid #e9e9e9;
+      border-radius: 5px; }
+
+footer {
+  clear: both;
+  display: block;
+  height: 100px;
+  background: #e9e9e9; }
+
+@media (max-width: 992px) {
+  section .container {
+    max-width: 100%; }
+  #timer {
+    width: 100%; }
+    #timer .box-timer {
+      width: 25%;
+      float: left; }
+  #wedding #chacara .chacara-img {
+    max-width: 100%; }
+  #wedding #chacara .chacara-info {
+    top: 0; }
+  #gifts .gift a {
+    margin: 40px 0;
+    padding: 0; } }
+
+@media (max-width: 728px) {
+  section {
+    padding: 50px 10px; }
+  #home {
+    padding: 30% 5%; }
+    #home h1 {
+      font-size: 100px;
+      line-height: 70px; }
+  #wedding #chacara .chacara-info {
+    position: initial;
+    width: 100%;
+    padding-top: 20px;
+    clear: both; }
+  #wedding .container {
+    padding: 0; }
+    #wedding .container #infos p,
+    #wedding .container #infos-more p {
+      width: 90%; }
+  #wedding #map {
+    margin: 0px; }
+  #match .tinder h2 {
+    font-size: 60px; }
+  #match .profile span {
+    font-size: 16px; }
+  #timer {
+    padding: 60px 0px; }
+  #gifts .gift a img {
+    max-width: 100%; } }
+
+@media (max-width: 320px) {
+  #home {
+    padding-top: 30%;
+    padding-bottom: 30%; }
+    #home h1 {
+      font-size: 70px;
+      line-height: 60px; }
+    #home span {
+      font-size: 24px; }
+  #timer .box-timer .time {
+    font-size: 30px; }
+  #wedding {
+    padding: 50px 0; } }
+
+.modal {
+  font-family: "Raleway", sans-serif; }
+  .modal .close {
+    color: #f1637f;
+    opacity: 1;
+    font-size: 22px; }
+    .modal .close:hover {
+      background: none;
+      color: #f7768e; }
+  .modal form label {
+    color: #333;
+    font-weight: normal; }
+  .modal form input[type=number]::-webkit-inner-spin-button {
+    opacity: 1; }
+
+.companion-group {
+  clear: both;
+  padding: 10px 0px; }
+  .companion-group input[type=text] {
+    width: 50%;
+    float: left; }
+  .companion-group .checkbox {
+    float: left;
+    width: 49%;
+    margin-left: 1%;
+    margin-top: 0px; }
+    .companion-group .checkbox .above,
+    .companion-group .checkbox .age {
+      color: #999999; }
+    .companion-group .checkbox .above {
+      width: 60%; }
+    .companion-group .checkbox .age {
+      width: 40%;
+      display: none; }
+      .companion-group .checkbox .age input,
+      .companion-group .checkbox .age span {
+        width: 50%; }
+
+.addCompanion {
+  clear: both;
+  display: block;
+  color: #f1637f;
+  font-size: 12px;
+  padding-top: 20px;
+  text-align: right; }
+  .addCompanion:hover, .addCompanion:active, .addCompanion:focus {
+    color: #f1637f; }
+
+button, a.btn-custom {
   background: #f1637f;
   color: #FFF;
-  padding: 10px 40px;
-  border: none;
-  border-bottom: 3px solid #f1637f; }
-  button:hover {
-    color: #f1637f;
-    background: #f8d8e1; }
-  button:active {
+  font-weight: bold;
+  padding: 10px 80px;
+  border: none; }
+  button:hover, a.btn-custom:hover {
+    color: #FFFFFF;
+    background: #f7768e; }
+  button:active, a.btn-custom:active {
     border-bottom: 3px solid #f8d8e1; }

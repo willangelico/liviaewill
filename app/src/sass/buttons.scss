@@ -1,12 +1,13 @@
-button{
+button,a.btn-custom{
 	background: $color-primary;
-	color: #FFF;
-	padding: 10px 40px;
+	color: #FFF;	
+	font-weight: bold;
+	padding: 10px 80px;
 	border: none;
-	border-bottom: 3px solid $color-primary;
+	
 	&:hover{
-		color: $color-primary;
-		background: $bg-secundary;
+		color: #FFFFFF;
+		background: #f7768e;
 	}
 	&:active{
 		border-bottom: 3px solid $bg-secundary;

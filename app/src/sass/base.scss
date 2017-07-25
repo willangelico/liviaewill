@@ -1,16 +1,41 @@
 h1{
 	font-family: $font-type-header1;
+	color: $color-txt-default;
+
 }
 h2{
 	text-align: center;
 	font-family: $font-type-default;
+	color: $color-txt-default;
+	text-transform: uppercase;
+	font-weight: bold;
 }
-section{
+section{	
 	padding: 50px;
 	margin-bottom: 50px;
 	font-family: $font-type-default;
+	color: $color-txt-default;
 	span{
 		display: block;
 		text-align: center;
+	}
+}
+.txt-center{ text-align: center;}
+
+footer {
+	a {
+	    font-size: 10px;
+	    text-align: right;
+	    display: block;
+	    color: #999;
+	}
+}
+
+.modal-body{
+	h5, a{
+		color: $color-primary;
+	}
+	a{
+		text-decoration: underline;
 	}
 }

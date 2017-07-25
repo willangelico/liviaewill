@@ -67,7 +67,7 @@ gulp.task('html', function() {
 
 // Fonts
 gulp.task('fonts', function() {
-    return gulp.src(['./bower_components/font-awesome/fonts/fontawesome-webfont.*'])
+    return gulp.src(['./bower_components/font-awesome/fonts/fontawesome-webfont.*', './bower_components/bootstrap/fonts/*'])
             .pipe(gulp.dest('dist/assets/fonts/'));
 });
 // Fonts

@@ -1,0 +1,67 @@
+
+.modal{
+	font-family: $font-type-default;
+	.close{
+		
+		color: #f1637f;
+		opacity: 1;
+		
+		font-size: 22px;
+		&:hover{
+			background: none;
+			color: #f7768e;
+		}
+	}
+	form{
+		label{
+			color: #333;
+			font-weight: normal;
+
+		}
+		input[type=number]::-webkit-inner-spin-button {
+		  opacity: 1;
+		}
+	}
+}
+.companion-group{
+	clear: both;
+	padding: 10px 0px;
+	input[type=text]{
+		width: 50%;
+		float: left;
+	}
+	.checkbox{
+		float: left;
+		width: 49%;
+		margin-left: 1%;
+		margin-top: 0px;
+		.above,
+		.age{
+			color: #999999;
+		}
+		.above{
+			width: 60%
+		}
+		.age{
+			width: 40%;
+			display: none;
+			input,
+			span{ 
+				width: 50%;
+			}			
+		}
+	}
+}
+.addCompanion{
+	clear: both;
+	display: block;
+	color: #f1637f;
+	font-size: 12px;
+	padding-top: 20px;
+	text-align: right;
+	&:hover,
+	&:active,
+	&:focus{
+		color: #f1637f;	
+	}
+}

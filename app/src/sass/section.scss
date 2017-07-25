@@ -3,7 +3,7 @@
 	background-size: cover;
     background-position: center center;
     width: 100%;
-	padding: 20%;
+	padding: 15%;
     height: 100%;
     margin-bottom: 0px !important;
     h1, span{
@@ -11,8 +11,8 @@
     }
     h1{    	
     	font-size: 220px;
-	    margin: 0px;
-	    color: $color-primary;
+    	color: $color-primary;
+	    margin: 0px;	    
 	    line-height: 140px;
 	    -ms-transform: rotate(-5deg);
 	    -webkit-transform: rotate(-5deg);
@@ -20,13 +20,13 @@
     }
     span{ 
     	display: block;
-    	font-size: 30px;
+    	font-size: 50px;
     	color: $color-default;   
     }    
 }
 #match{
 	height: 100%;
-	background: #000;
+	background: #222222;
     padding: 0px;
     position: relative; 
     padding-bottom: 50px;
@@ -45,16 +45,19 @@
 		display: block;
 		h2{
 			font-family: $font-type-header1;
-			font-size: 90px;
+			font-size: 120px;
 			margin: 0px;
 			color: #FFF;
-			padding-top: 40px;		
+			padding-top: 40px;
+			text-transform: none;
+			font-weight: normal;
 		}	
 	}
 	.profile{
 		text-align: center;
 		img{ 
-			max-width: 400px;
+			width: 400px;
+			max-width: 100%;
 			display: block;
 			margin: 0 auto;
 		}
@@ -63,7 +66,299 @@
 			padding: 20px;
 			font-size: 20px;
 			font-weight: bold;
-			display: block;
+			display: block;			
+		}
+		p{
+			font-style: italic;
+			color: #d7d7d7;			
 		}
 	}
 }
+#save-the-date{
+	text-align: center;
+	h3{
+		display: block;
+		clear: both;		
+		padding: 40px 0 0;
+	}	
+}
+#timer{	
+	width: 50%;
+	margin: 0px auto;
+	padding: 60px 40px;
+	.box-timer{		
+		.time{
+			font-size: 60px;			
+		}
+		.label{
+			color: $color-txt-default;
+		}	
+	}
+	
+}
+
+
+
+#wedding{
+	background: #e9e9e9;
+	#chacara{
+		position: relative;
+		margin: 20px auto;
+		.chacara-img{
+			position: relative;
+		    max-width: 70%;
+		    display: block;
+		    float: left;
+			span{
+				display: block;
+			    width: 94%;
+			    height: 92%;
+			    position: absolute;
+			    top: 3.5%;
+			    left: 2.6%;
+			    border: 3px #fff solid;
+			    z-index: 7;
+			}
+			img{
+				width: 100%;
+				display: block;
+			}
+		}
+		.chacara-info{
+			width: 50%;
+		    right: 0;
+		    top: 50px;
+		    position: absolute;
+		    background-color: $color-primary;
+		    color: #fff;
+		    padding: 40px;
+		    z-index: 8;
+		    span{
+				text-align: left;
+				padding-bottom: 20px;
+		    }		    
+		}
+	}
+	#infos{
+		span,
+		h3,
+		p{
+			text-align: center;
+		}
+		span {
+		    color: #F1637F;
+		    font-size: 24px !important;
+		}
+		h3 {
+		    margin-top: 0px !important;
+		}
+		p{
+			width: 70%;
+			margin: 0 auto;
+			color: #65645f;
+		}
+	}
+	#infos-more{
+		padding: 50px 0px;		
+		h4,
+		p{
+			text-align: center;				
+		}
+		p{
+			width: 70%;
+			margin: 0 auto;
+			color: #65645f;
+			a{
+				color: #f1637f;
+				&:hover,
+				&:focus,
+				&:active{
+					color: #f1637f;
+				}
+			}
+		}
+	}
+	#map{
+		margin: 10px -50px;
+		iframe{
+			width: 100%;
+			display: block;
+			pointer-events: none;
+			position: relative; /* IE needs a position other than static */
+			&.clicked{
+				pointer-events: auto;
+			}
+		}
+	}
+}
+
+#rsvp{
+	background: #e9e9e9;
+	text-align: center;
+	padding: 140px 0px;
+	button{
+		margin: 30px;
+	}
+}
+
+#gifts{
+
+	.gift{
+		text-align: center;
+		a{
+			display: block;
+			margin: 40px;
+			padding: 30px;	
+			&:hover{
+				img{
+					opacity: 0.8;
+				}
+			}
+			img{
+				border: 1px solid #e9e9e9;
+				border-radius: 5px;	
+			}		
+			
+		}
+	}
+} 
+
+footer{
+	clear: both;
+	display: block;
+	height: 100px;
+	background: #e9e9e9;
+}
+
+
+
+@media (max-width: 1200px) {  }
+
+@media (max-width: 992px) { 
+	
+
+	section {
+		.container {
+		    max-width: 100%;
+		}
+	}
+	#timer{
+		width: 100%;
+		.box-timer{
+			width: 25%;
+			float: left;
+		}
+	}
+
+	#wedding {
+		#chacara {
+			.chacara-img{
+				max-width: 100%;
+			}
+			.chacara-info{
+				top: 0;
+			}
+		}
+	}
+	#gifts {
+		.gift {
+			a {
+			    margin: 40px 0;
+			    padding: 0;
+			}
+		}
+	}
+
+}
+
+@media (max-width: 728px) {
+	section{
+		padding: 50px 10px;
+	}
+	#home{
+		padding: 30% 5%;
+		h1 { 
+			font-size: 100px;
+			line-height: 70px;
+		}  
+	}
+	#wedding {
+		#chacara {		
+			.chacara-info{
+				position: initial;
+				width: 100%;
+				padding-top: 20px;
+				clear: both
+			}
+		}
+		.container{
+		    padding: 0;
+		    #infos,
+		    #infos-more{
+		    	p{
+		    		width: 90%;
+		    	}
+		    }
+		}
+		#map{
+			margin: 0px
+		}
+	}
+	#match {
+		.tinder {
+			h2{
+				font-size: 60px;
+			}
+		}
+		.profile {
+			span{
+				font-size: 16px;
+			}
+		}
+	}
+	#timer{
+		padding: 60px 0px;
+	}
+	#gifts{
+		.gift{
+			a{
+				img{
+					max-width: 100%;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 320px) {  
+	#home{
+		padding-top: 30%;
+		padding-bottom: 30%;
+		h1 { 
+			font-size: 70px;
+			line-height: 60px;
+		}  
+		span{
+			font-size: 24px;
+		}
+	}
+	#timer {
+		.box-timer {
+			.time {
+    			font-size: 30px;
+    		}
+    	}
+    }
+    #wedding {
+    	padding: 50px 0;
+    	
+		
+	}
+
+	
+
+}
+
+
+
+
