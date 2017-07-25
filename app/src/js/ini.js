@@ -58,6 +58,12 @@
 				$('header').addClass('active');
 			}
 		});
+		if($(window).width() < 992){
+			$('nav ul li a').on('click', function(){
+				$('#header-mobile button').find('span').addClass('glyphicon-menu-hamburger').removeClass('glyphicon-remove');
+				$('header').removeClass('active');
+			});
+		}
 
 		$('.gift').tooltip();
 		// Initialize Firebase
@@ -72,6 +78,7 @@
 		firebase.initializeApp(config);
 
 		$('#rsvp-confirm').on('click',function(){
+			$(this).prop("disabled",true);
 			var acompanhante = function(){
 				var acpsReturn = [];
 				$('.companion-group').each(function(index){
@@ -104,11 +111,18 @@
 				"acompanhantes": acompanhante()
 			};
 			
-			var defaultDatabase = firebase.database().ref('users/').push(json);
+			var defaultDatabase = firebase.database().ref('users/').push(json, function(error) {
+  				if (error){
+  					$('.modal-footer').prepend('<div class="alert alert-error" role="alert">Erro ao confirmar sua presença. Tente novamente ou liga pra gente ;)</div>')
+  				}else{
+	  				$('.modal-footer').prepend('<div class="alert alert-success" role="alert">Confirmação realizada com sucesso.</div>')
+	  				$('#rsvp-modal form').trigger("reset");
+	  			}
+  			});
+  			setTimeout(function(){
+  				$(this).prop("disabled",false);	
+  			},3000);
 			
 		});
-
-
-
 	});
 })(jQuery); 
